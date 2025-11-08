@@ -1,0 +1,191 @@
+---
+# Preamble
+
+## Author
+author:
+  name: Власов Артем Сергеевич
+  degrees: DSc
+  orcid: 0000-0002-0877-7063
+  email: 1132246841@rudn.ru
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6
+## Title
+title: Презентация к лабораторной работе 10
+subtitle: Управление модулями ядра
+license: CC BY
+date: 1970-01-01
+## Generic options
+lang: ru-RU
+crossref:
+  lof-title: Список иллюстраций
+  lot-title: Список таблиц
+  lol-title: Листинги
+## Formats
+format:
+### Pdf output format
+  beamer:
+    toc: true
+    toc-title: Содержание
+    number-sections: true
+    colorlinks: false
+    toc-depth: 2
+    slide_level: 2
+    aspectratio: 169
+    section-titles: true
+    theme: metropolis
+    themeoptions: progressbar=frametitle,sectionpage=progressbar,numbering=fraction
+#### Language
+    babel-lang: russian
+    babel-otherlangs: english
+### Html output
+  revealjs:
+    transition: slide
+    margin: 0.2
+    smaller: false
+    output-ext: html
+    theme: beige
+    logo: _resources/image/logo_rudn.png
+---
+
+# Информация
+
+## Докладчик
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+  * Власов Артем Сергеевич
+  * Студент
+  * Студент
+  * Российский университет дружбы народов им. П. Лумумбы
+  * [1132246841@rudn.ru](mailto:1132246841@rudn.ru)
+  * <https://vlasovas52.github.io/ru/>
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
+
+# Вводная часть
+
+## Цели и задачи
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Получить навыки работы с утилитами управления модулями ядра операционной системы.
+Продемонстрировать навыки работы по управлению модулями ядра, загрузке модулей ядра с параметрами и обновлению ядра системы.
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
+
+# Выполнение лабораторной работы 10
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Смотрим какие устройства есть в системе и какие модули ядра с ними связаны.Смотрим какие модули ядра загружены.
+
+:::
+::: {.column width="30%"}
+
+![Проверка модулей ядра](image/1.png){#fig:001 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Смотрим на статус модуля ext4 и загружаем его, смотрим его параметры.
+
+:::
+::: {.column width="30%"}
+
+![Модуль ext4](image/2.png){#fig:002 width=70%}
+
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Выгружаем модули ядра ext4 и xfs
+
+:::
+::: {.column width="30%"}
+
+![Выгружаем модули](image/3.png){#fig:003 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Просматриваем всю информацию по модулю bluetooth, загружаем и выгружаем его.
+
+:::
+::: {.column width="30%"}
+
+![Моудль bluetooth](image/4.png){#fig:004 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Смотрим версию ядра операционной системы и обновляем её.
+
+:::
+::: {.column width="30%"}
+
+![Обновление версии ядра](image/5.png){#fig:004 width=70%}
+
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Проверяем все ли пакеты были обновлены и перезапускаем сисетму с другой версией ядра.
+
+:::
+::: {.column width="30%"}
+
+![Перезапуск системы](image/6.png){#fig:006 width=70%}
+
+![Параметры системы](image/7.png){#fig:007 width=70%}
+
+:::
+::::::::::::::
+
+
+# Выводы
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Мы научились работать с утилитами управления модулями ядра операционной системы.
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
