@@ -1,0 +1,129 @@
+---
+# Preamble
+
+## Author
+author:
+  name: Власов Артем Сергеевич
+  degrees: 
+  orcid: 0000-0002-0877-7063
+  email: 1132246841@pfur.ru
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6
+## Title
+title: "Отчет по лабораторной работе 10"
+subtitle: "Управление модулями ядра"
+license: "CC BY"
+## Generic options
+lang: ru-RU
+number-sections: true
+toc: true
+toc-title: "Содержание"
+toc-depth: 2
+## Crossref customization
+crossref:
+  lof-title: "Список иллюстраций"
+  lot-title: "Список таблиц"
+  lol-title: "Листинги"
+## Bibliography
+bibliography:
+  - bib/cite.bib
+csl: _resources/csl/gost-r-7-0-5-2008-numeric.csl
+## Formats
+format:
+### Pdf output format
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: false
+    toc-depth: 2
+    lof: true # List of figures
+    lot: true # List of tables
+#### Document
+    documentclass: scrreprt
+    papersize: a4
+    fontsize: 12pt
+    linestretch: 1.5
+#### Language
+    babel-lang: russian
+    babel-otherlangs: english
+#### Biblatex
+    cite-method: biblatex
+    biblio-style: gost-numeric
+    biblatexoptions:
+      - backend=biber
+      - langhook=extras
+      - autolang=other*
+#### Misc options
+    csquotes: true
+    indent: true
+    header-includes: |
+      \usepackage{indentfirst}
+      \usepackage{float}
+      \floatplacement{figure}{H}
+      \usepackage[math,RM={Scale=0.94},SS={Scale=0.94},SScon={Scale=0.94},TT={Scale=MatchLowercase,FakeStretch=0.9},DefaultFeatures={Ligatures=Common}]{plex-otf}
+### Docx output format
+  docx:
+    toc: true
+    number-sections: true
+    toc-depth: 2
+---
+
+# Цель работы
+
+Получить навыки работы с утилитами управления модулями ядра операционной системы.
+
+# Задание
+
+Продемонстрировать навыки работы по управлению модулями ядра, загрузке модулей ядра с параметрами и обновлению ядра системы.
+
+# Выполнение лабораторной работы 10.
+
+Смотрим какие устройства есть в системе и какие модули ядра с ними связаны.Смотрим какие модули ядра загружены.
+
+![Проверка модулей ядра](image/1.png){#fig:001 width=70%}
+
+Мы видим ID устройства, его имя, модуль и драйвер.
+
+Смотрим на статус модуля ext4 и загружаем его, смотрим его параметры.
+
+![Модуль ext4](image/2.png){#fig:002 width=70%}
+
+Отсутствие параметров означет работу модуля со стандартными настройками, с помощью команды мы увидели расположение файла модуля, лицензию, описание, разработчика модуля и тд.
+
+Выгружаем модули ядра ext4 и xfs
+
+![Выгружаем модули](image/3.png){#fig:003 width=70%}
+
+Система выдает информацию о том, что модуль сейчас используется, работающие модули нельзя выгрузить.
+
+Просматриваем всю информацию по модулю bluetooth, загружаем и выгружаем его.
+
+![Моудль bluetooth](image/4.png){#fig:004 width=70%}
+
+Видим парметры модуля bluetooth, например, отключение определенного типа передачи и расширенной передачи данных, также видим все тоже самое, что и у модуля ext4.
+
+Смотрим версию ядра операционной системы и обновляем её.
+
+![Обновление версии ядра](image/5.png){#fig:004 width=70%}
+
+Проверяем все ли пакеты были обновлены и перезапускаем сисетму с другой версией ядра.
+
+![Перезапуск системы](image/6.png){#fig:006 width=70%}
+
+Проверяем версию ядра в параметрах системы после перезапуска.
+
+![Параметры системы](image/7.png){#fig:007 width=70%}
+
+# Выводы
+
+Мы научились работать с утилитами управления модулями ядра операционной системы.
+
+
+# Список литературы{.unnumbered}
+
+::: {#refs}
+:::
