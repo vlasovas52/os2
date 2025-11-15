@@ -1,0 +1,123 @@
+---
+# Preamble
+
+## Author
+author:
+  name: Власов Артем Сергеевич
+  degrees: 
+  orcid: 0000-0002-0877-7063
+  email: 1132246841@pfur.ru
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6
+## Title
+title: "Отчет по лабораторной работе 11"
+subtitle: "Управление загрузкой системы"
+license: "CC BY"
+## Generic options
+lang: ru-RU
+number-sections: true
+toc: true
+toc-title: "Содержание"
+toc-depth: 2
+## Crossref customization
+crossref:
+  lof-title: "Список иллюстраций"
+  lot-title: "Список таблиц"
+  lol-title: "Листинги"
+## Bibliography
+bibliography:
+  - bib/cite.bib
+csl: _resources/csl/gost-r-7-0-5-2008-numeric.csl
+## Formats
+format:
+### Pdf output format
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: false
+    toc-depth: 2
+    lof: true # List of figures
+    lot: true # List of tables
+#### Document
+    documentclass: scrreprt
+    papersize: a4
+    fontsize: 12pt
+    linestretch: 1.5
+#### Language
+    babel-lang: russian
+    babel-otherlangs: english
+#### Biblatex
+    cite-method: biblatex
+    biblio-style: gost-numeric
+    biblatexoptions:
+      - backend=biber
+      - langhook=extras
+      - autolang=other*
+#### Misc options
+    csquotes: true
+    indent: true
+    header-includes: |
+      \usepackage{indentfirst}
+      \usepackage{float}
+      \floatplacement{figure}{H}
+      \usepackage[math,RM={Scale=0.94},SS={Scale=0.94},SScon={Scale=0.94},TT={Scale=MatchLowercase,FakeStretch=0.9},DefaultFeatures={Ligatures=Common}]{plex-otf}
+### Docx output format
+  docx:
+    toc: true
+    number-sections: true
+    toc-depth: 2
+---
+
+# Цель работы
+
+Получить навыки работы с загрузчиком системы GRUB2.
+
+# Задание
+
+Продемонстрировать навыки работы с изменением параметров GRUB и записи изменений в файл конфигурации, устранению неполадок при работе с GRUB, работы с GRUB без использования root.
+
+# Выполнение лабораторной работы 11.
+
+Изменяем параметр в файле и сохраняем изменения в файл конфигурации.
+
+![Изменение параметра](image/1.png){#fig:001 width=70%}
+
+![Сохранение в файл конфигурации](image/2.png){#fig:002 width=70%}
+
+Открываем меню GRUB для редактировани и задаем параметр rescue.target. Загружаем систему и видим режим восстановления.
+
+![Режим восстановления](image/3.png){#fig:003 width=70%}
+
+Смотрим список всех файлов модулей и задействованные переменные среды оболочки
+
+![Режим восстановления информация](image/4.png){#fig:004 width=70%}
+
+Перезагружаем систему и ставим параметр emergency.target.
+
+![Параметр загрузки](image/5.png){#fig:004 width=70%}
+
+Вводим те же команды и видим, что загруженный файлов модулей меньше.
+
+![Информация о запуске](image/6.png){#fig:006 width=70%}
+
+Меняем параметр запуска на rd.break
+
+![Параметр загрузки](image/7.png){#fig:007 width=70%}
+
+Получаем доступ к системному образу, создаем новый корневой каталог, меняем пароль root и включаем политику SELinux. Перезагружаем систему.
+
+![Смена root пароля](image/8.png){#fig:007 width=70%}
+
+# Выводы
+
+Мы научились работать с загрузчиком системы GRUB2.
+
+
+# Список литературы{.unnumbered}
+
+::: {#refs}
+:::
