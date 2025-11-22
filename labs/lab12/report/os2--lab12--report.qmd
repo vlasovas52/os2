@@ -1,0 +1,127 @@
+---
+# Preamble
+
+## Author
+author:
+  name: Власов Артем Сергеевич
+  degrees: 
+  orcid: 0000-0002-0877-7063
+  email: 1132246841@pfur.ru
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6
+## Title
+title: "Отчет по лабораторной работе 12"
+subtitle: "Настройка сети в Linux"
+license: "CC BY"
+## Generic options
+lang: ru-RU
+number-sections: true
+toc: true
+toc-title: "Содержание"
+toc-depth: 2
+## Crossref customization
+crossref:
+  lof-title: "Список иллюстраций"
+  lot-title: "Список таблиц"
+  lol-title: "Листинги"
+## Bibliography
+bibliography:
+  - bib/cite.bib
+csl: _resources/csl/gost-r-7-0-5-2008-numeric.csl
+## Formats
+format:
+### Pdf output format
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: false
+    toc-depth: 2
+    lof: true # List of figures
+    lot: true # List of tables
+#### Document
+    documentclass: scrreprt
+    papersize: a4
+    fontsize: 12pt
+    linestretch: 1.5
+#### Language
+    babel-lang: russian
+    babel-otherlangs: english
+#### Biblatex
+    cite-method: biblatex
+    biblio-style: gost-numeric
+    biblatexoptions:
+      - backend=biber
+      - langhook=extras
+      - autolang=other*
+#### Misc options
+    csquotes: true
+    indent: true
+    header-includes: |
+      \usepackage{indentfirst}
+      \usepackage{float}
+      \floatplacement{figure}{H}
+      \usepackage[math,RM={Scale=0.94},SS={Scale=0.94},SScon={Scale=0.94},TT={Scale=MatchLowercase,FakeStretch=0.9},DefaultFeatures={Ligatures=Common}]{plex-otf}
+### Docx output format
+  docx:
+    toc: true
+    number-sections: true
+    toc-depth: 2
+---
+
+# Цель работы
+
+Получить навыки настройки сетевых параметров системы.
+
+# Задание
+
+Продемонстрировать навыки работы с утилитой ip и nmcli.
+
+# Выполнение лабораторной работы 12.
+
+Выводим на экран информацию о существующих сетевых подключениях, статистику пакетов, информацию о текущих маршрутах и назначенных адресов для сетевых интерейсов.
+
+![Инфорамция о сети](image/1.png){#fig:001 width=70%}
+
+Исходя из информации мы можем узнать о состоянии интерфейса, МАС-адрес, MTU, TX и RX пакеты. Маршруты по умолчанию, локальные и дополнительные сети, ipv4 адреса, сетевой адаптер, ipv6 и тд.
+
+Используем команду ping для проверки подключения к интернету, Добавляем дополнительный адрес, и проверяем. 
+
+![ping и доп адрес](image/2.png){#fig:002 width=70%}
+
+Видим, что адрес был добавлен к интерфейсу.
+
+Выводим на экран информацию о соединениях, далее добавляем два новых соединения dhcp и static, переключаемся на них и проверяем умпешность подключения.
+
+![Работа с соединениями](image/3.png){#fig:003 width=70%}
+
+![Режим восстановления информация](image/4.png){#fig:004 width=70%}
+
+Работаем с nmcli. Добавляем dns статическому соединению, затем еще один. Меняем IP адерс соединения и добавляем второй. Активируем соедиение static.
+
+![Действия с dns и ip](image/5.png){#fig:004 width=70%}
+
+Открываем графиечкий интерфейс nmtui.
+
+![nmtui](image/6.png){#fig:006 width=70%}
+
+Видим, что название сети ethernet, видим защиту, и конфигурации ipv4 и ipv6, автоматическое ли подключение, список ip адресов, шлюз, dns серверы и тд.
+
+Смотрим настройки сети в настройках ОС.
+
+![Параметр загрузки](image/7.png){#fig:007 width=70%}
+
+Переключаемся к начальному сетевому соединению.
+
+# Выводы
+
+Мы получили навыки настройки сетевых параметров системы.
+
+
+# Список литературы{.unnumbered}
+
+::: {#refs}
+:::
