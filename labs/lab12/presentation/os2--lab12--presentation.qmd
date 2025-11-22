@@ -1,0 +1,190 @@
+---
+# Preamble
+
+## Author
+author:
+  name: Власов Артем Сергеевич
+  degrees: DSc
+  orcid: 0000-0002-0877-7063
+  email: 1132246841@rudn.ru
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6
+## Title
+title: Презентация к лабораторной работе 12
+subtitle: Настройка сети в Linux
+license: CC BY
+date: 2025-11-22
+## Generic options
+lang: ru-RU
+crossref:
+  lof-title: Список иллюстраций
+  lot-title: Список таблиц
+  lol-title: Листинги
+## Formats
+format:
+### Pdf output format
+  beamer:
+    toc: true
+    toc-title: Содержание
+    number-sections: true
+    colorlinks: false
+    toc-depth: 2
+    slide_level: 2
+    aspectratio: 169
+    section-titles: true
+    theme: metropolis
+    themeoptions: progressbar=frametitle,sectionpage=progressbar,numbering=fraction
+#### Language
+    babel-lang: russian
+    babel-otherlangs: english
+### Html output
+  revealjs:
+    transition: slide
+    margin: 0.2
+    smaller: false
+    output-ext: html
+    theme: beige
+    logo: _resources/image/logo_rudn.png
+---
+
+# Информация
+
+## Докладчик
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+  * Власов Артем Сергеевич
+  * Студент
+  * Студент
+  * Российский университет дружбы народов им. П. Лумумбы
+  * [1132246841@rudn.ru](mailto:1132246841@rudn.ru)
+  * <https://vlasovas52.github.io/ru/>
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
+
+# Вводная часть
+
+## Цели и задачи
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Получить навыки настройки сетевых параметров системы.
+Продемонстрировать навыки работы с утилитой ip и nmcli.
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
+
+# Выполнение лабораторной работы 12
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Выводим на экран информацию о существующих сетевых подключениях, статистику пакетов, информацию о текущих маршрутах и назначенных адресов.
+:::
+::: {.column width="30%"}
+
+![Инфорамция о сети](image/1.png){#fig:001 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Используем команду ping для проверки подключения к интернету, Добавляем дополнительный адрес, и проверяем. 
+
+:::
+::: {.column width="30%"}
+
+![ping и доп адрес](image/2.png){#fig:002 width=70%}
+
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Выводим на экран информацию о соединениях, далее добавляем два новых соединения dhcp и static, переключаемся на них.
+
+:::
+::: {.column width="30%"}
+
+![Работа с соединениями](image/3.png){#fig:003 width=70%}
+
+![Переключение](image/4.png){#fig:004 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Работаем с nmcli. Добавляем dns статическому соединению, затем еще один. Меняем IP адерс соединения и добавляем второй. Активируем соедиение static.
+
+:::
+::: {.column width="30%"}
+
+![Действия с dns и ip](image/5.png){#fig:004 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Открываем графиечкий интерфейс nmtui.
+
+:::
+::: {.column width="30%"}
+
+![nmtui](image/6.png){#fig:006 width=70%}
+
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Смотрим настройки сети в настройках ОС.
+
+:::
+::: {.column width="30%"}
+
+![Настрйоки в ОС](image/7.png){#fig:007 width=70%}
+
+:::
+::::::::::::::
+
+
+# Выводы
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Мы получили навыки настройки сетевых параметров системы.
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
