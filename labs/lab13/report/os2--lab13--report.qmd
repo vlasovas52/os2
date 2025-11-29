@@ -1,0 +1,126 @@
+---
+# Preamble
+
+## Author
+author:
+  name: Власов Артем Сергеевич
+  degrees: 
+  orcid: 0000-0002-0877-7063
+  email: 1132246841@pfur.ru
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6
+## Title
+title: "Отчет по лабораторной работе 13"
+subtitle: "Фильтр пакетов"
+license: "CC BY"
+## Generic options
+lang: ru-RU
+number-sections: true
+toc: true
+toc-title: "Содержание"
+toc-depth: 2
+## Crossref customization
+crossref:
+  lof-title: "Список иллюстраций"
+  lot-title: "Список таблиц"
+  lol-title: "Листинги"
+## Bibliography
+bibliography:
+  - bib/cite.bib
+csl: _resources/csl/gost-r-7-0-5-2008-numeric.csl
+## Formats
+format:
+### Pdf output format
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: false
+    toc-depth: 2
+    lof: true # List of figures
+    lot: true # List of tables
+#### Document
+    documentclass: scrreprt
+    papersize: a4
+    fontsize: 12pt
+    linestretch: 1.5
+#### Language
+    babel-lang: russian
+    babel-otherlangs: english
+#### Biblatex
+    cite-method: biblatex
+    biblio-style: gost-numeric
+    biblatexoptions:
+      - backend=biber
+      - langhook=extras
+      - autolang=other*
+#### Misc options
+    csquotes: true
+    indent: true
+    header-includes: |
+      \usepackage{indentfirst}
+      \usepackage{float}
+      \floatplacement{figure}{H}
+      \usepackage[math,RM={Scale=0.94},SS={Scale=0.94},SScon={Scale=0.94},TT={Scale=MatchLowercase,FakeStretch=0.9},DefaultFeatures={Ligatures=Common}]{plex-otf}
+### Docx output format
+  docx:
+    toc: true
+    number-sections: true
+    toc-depth: 2
+---
+
+# Цель работы
+
+Получить навыки настройки пакетного фильтра в Linux.
+
+# Задание
+
+Использовать утиоиты firewall-cmd и firewall-config.
+Выполнить самостоятельное задание.
+
+# Выполнение лабораторной работы 13.
+
+Выводим на экран информацию о текущей зоне по умолчанию, службах, службах в текущей зоне.
+
+![Информация о зонах](image/1.png){#fig:001 width=70%}
+
+Добавляем сервер в концфигурацию(без флага permanent) и с флагом.
+
+![vnc](image/2.png){#fig:002 width=70%}
+
+Так как сервер был добавлен без флага постоянный, после перезагрузки он исчезает.
+
+Сервер, добавленный с флагом не будет исчезать после перезагрузки, и отобразится толкьо после нее, потому что он не записывается в текущую сессию.
+
+Добавляем в конфигурацию межсетевого экрана порт, перезапускаем и проверяем.
+
+![Добавление протокола](image/3.png){#fig:003 width=70%}
+
+Работа с firewall-config. Добавляем новые службы и порт в permanent.
+
+![Графический интерфейс](image/4.png){#fig:004 width=70%}
+
+Добавляем службу telnet через терминал, проверяем добавление после перезапуска.
+
+![telnet](image/5.png){#fig:004 width=70%}
+
+Добавялем остальные службы через графический интерфейс.
+
+![imap pop3 smtp](image/6.png){#fig:006 width=70%}
+
+Проверяем конфигурацию и применение изменений.
+
+![Проверка](image/7.png){#fig:007 width=70%}
+
+# Выводы
+
+Мы получили навыки настройки пакетного фильтра в Linux.
+
+
+# Список литературы{.unnumbered}
+
+::: {#refs}
+:::
