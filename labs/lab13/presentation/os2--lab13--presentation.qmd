@@ -1,0 +1,191 @@
+---
+# Preamble
+
+## Author
+author:
+  name: Власов Артем Сергеевич
+  degrees: DSc
+  orcid: 0000-0002-0877-7063
+  email: 1132246841@rudn.ru
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6
+## Title
+title: Презентация к лабораторной работе 13
+subtitle: Фильтр пакетов
+license: CC BY
+date: 2025-11-22
+## Generic options
+lang: ru-RU
+crossref:
+  lof-title: Список иллюстраций
+  lot-title: Список таблиц
+  lol-title: Листинги
+## Formats
+format:
+### Pdf output format
+  beamer:
+    toc: true
+    toc-title: Содержание
+    number-sections: true
+    colorlinks: false
+    toc-depth: 2
+    slide_level: 2
+    aspectratio: 169
+    section-titles: true
+    theme: metropolis
+    themeoptions: progressbar=frametitle,sectionpage=progressbar,numbering=fraction
+#### Language
+    babel-lang: russian
+    babel-otherlangs: english
+### Html output
+  revealjs:
+    transition: slide
+    margin: 0.2
+    smaller: false
+    output-ext: html
+    theme: beige
+    logo: _resources/image/logo_rudn.png
+---
+
+# Информация
+
+## Докладчик
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+  * Власов Артем Сергеевич
+  * Студент
+  * Студент
+  * Российский университет дружбы народов им. П. Лумумбы
+  * [1132246841@rudn.ru](mailto:1132246841@rudn.ru)
+  * <https://vlasovas52.github.io/ru/>
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
+
+# Вводная часть
+
+## Цели и задачи
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Получить навыки настройки пакетного фильтра в Linux.
+Использовать утиоиты firewall-cmd и firewall-config.
+Выполнить самостоятельное задание.
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
+
+# Выполнение лабораторной работы 13
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Выводим на экран информацию о текущей зоне по умолчанию, службах, службах в текущей зоне.
+:::
+::: {.column width="30%"}
+
+![Информация о зонах](image/1.png){#fig:001 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Добавляем сервер в концфигурацию(без флага permanent) и с флагом.
+
+:::
+::: {.column width="30%"}
+
+![vnc](image/2.png){#fig:002 width=70%}
+
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Добавляем в конфигурацию межсетевого экрана порт, перезапускаем и проверяем.
+
+:::
+::: {.column width="30%"}
+
+![Добавление протокола](image/3.png){#fig:003 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Работа с firewall-config. Добавляем новые службы и порт в permanent.
+
+:::
+::: {.column width="30%"}
+
+![Графический интерфейс](image/4.png){#fig:004 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Добавляем службу telnet через терминал, проверяем добавление после перезапуска.
+
+:::
+::: {.column width="30%"}
+
+![telnet](image/5.png){#fig:004 width=70%}
+
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Добавялем остальные службы через графический интерфейс и проверяем.
+
+:::
+::: {.column width="30%"}
+
+![imap pop3 smtp](image/6.png){#fig:006 width=70%}
+
+![Проверка](image/7.png){#fig:007 width=70%}
+
+:::
+::::::::::::::
+
+
+# Выводы
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Мы получили навыки настройки пакетного фильтра в Linux.
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
