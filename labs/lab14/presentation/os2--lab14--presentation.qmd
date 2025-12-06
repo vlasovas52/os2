@@ -1,0 +1,215 @@
+---
+# Preamble
+
+## Author
+author:
+  name: Власов Артем Сергеевич
+  degrees: DSc
+  orcid: 0000-0002-0877-7063
+  email: 1132246841@rudn.ru
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6
+## Title
+title: Презентация к лабораторной работе 14
+subtitle: Партиции, файловые системы, монтирование
+license: CC BY
+date: 2025-11-22
+## Generic options
+lang: ru-RU
+crossref:
+  lof-title: Список иллюстраций
+  lot-title: Список таблиц
+  lol-title: Листинги
+## Formats
+format:
+### Pdf output format
+  beamer:
+    toc: true
+    toc-title: Содержание
+    number-sections: true
+    colorlinks: false
+    toc-depth: 2
+    slide_level: 2
+    aspectratio: 169
+    section-titles: true
+    theme: metropolis
+    themeoptions: progressbar=frametitle,sectionpage=progressbar,numbering=fraction
+#### Language
+    babel-lang: russian
+    babel-otherlangs: english
+### Html output
+  revealjs:
+    transition: slide
+    margin: 0.2
+    smaller: false
+    output-ext: html
+    theme: beige
+    logo: _resources/image/logo_rudn.png
+---
+
+# Информация
+
+## Докладчик
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+  * Власов Артем Сергеевич
+  * Студент
+  * Студент
+  * Российский университет дружбы народов им. П. Лумумбы
+  * [1132246841@rudn.ru](mailto:1132246841@rudn.ru)
+  * <https://vlasovas52.github.io/ru/>
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
+
+# Вводная часть
+
+## Цели и задачи
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Получить навыки создания разделов на диске и файловых систем. Получить навыки монтирования файловых систем.
+Использовать утилиты fdisk и gdisk для работы с дисками, монтировать два диска.
+Выполнить самостоятельное задание.
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
+
+# Выполнение лабораторной работы 14
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Создаем разделы MBR диска с помощью утилиты fdisk.
+:::
+::: {.column width="30%"}
+
+![Создание разделов fdisk](image/2.png){#fig:001 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Создаем логический раздел с помощью fdisk.
+
+:::
+::: {.column width="30%"}
+
+![Создание разделов fdisk](image/4.png){#fig:002 width=70%}
+
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Создаем раздел подкачки, делаем все тоже самое, но выбираем тип 82. Затем форматируем этот раздел.
+
+:::
+::: {.column width="30%"}
+
+![Раздел подкачки](image/5.png){#fig:004 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Создаем разделы GPT. Выбираем все те же параметры раздела.
+
+:::
+::: {.column width="30%"}
+
+![GPT разделы](image/6.png){#fig:006 width=70%}
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Форматируем файловые системы XFS и EXT4.
+
+:::
+::: {.column width="30%"}
+
+![Форматирование файловых систем](image/7.png){#fig:007 width=70%}
+
+
+:::
+::::::::::::::
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Начинаем ручное форматирование файловых систем. Создаем точку монтирования и используем утилиту mount.
+
+:::
+::: {.column width="30%"}
+
+![Ручное монтирование](image/8.png){#fig:008 width=70%}
+
+:::
+::::::::::::::
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Монтируем с помощью fstab. Также создаем раздел для монтирования, но уже задаем идентификатор устройства в конфигурацию, для автоматического монтирования.
+
+:::
+::: {.column width="30%"}
+
+![Автоматическое монтирование](image/9.png){#fig:009 width=70%}
+
+:::
+::::::::::::::
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Самостоятельная работа. Создаем разделы для диска 2. И делаем их автоматическое монтирование.
+
+:::
+::: {.column width="30%"}
+
+![Самостоятельная работа](image/10.png){#fig:010 width=70%}
+
+:::
+::::::::::::::
+
+
+# Выводы
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+Мы получили навыки работы с разделами диска и монтированием дисков.
+
+:::
+::: {.column width="30%"}
+
+:::
+::::::::::::::
